@@ -5,56 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grupo do Rio | Home</title>
     <style>
-        /* Reset básico */
-        body, h1, p, ul {
+        /* Fundo da página */
+        body {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f0f0f0; /* Cor cinza clara ao fundo */
+            display: flex;
+            justify-content: center;
         }
 
-        /* Container do Cabeçalho */
-        .header-container {
+        /* Conteiner Principal */
+        .page-wrapper {
             width: 100%;
-            border-bottom: 1px solid #ccc;
+            max-width: 1100px; /* Limita a largura lateral */
+            background-color: #ffffff; /* Fundo branco da caixa */
+            min-height: 100vh;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave nas laterais */
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
         }
 
-        /* Parte Superior: Logos e Título */
+        /* Cabeçalho superior */
         .header-top {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 5%;
-            background-color: #fff;
+            padding: 20px;
         }
 
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
         }
 
         .logo {
-            height: 70px; 
+            height: 80px;
             width: auto;
         }
 
         .group-title h1 {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
+            margin: 0;
             color: #000;
-            font-weight: 400;
         }
 
         /* Barra de Navegação */
         nav {
-            background-color: #ccd5ff; /* Azul claro */
-            border-top: 1px solid #aeb9e8;
-            border-bottom: 1px solid #aeb9e8;
+            background-color: #ccd5ff;
+            border-top: 1px solid #999;
+            border-bottom: 1px solid #999;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            width: 100%;
+            margin: 0;
+            padding: 0;
         }
 
         nav ul li {
@@ -69,70 +77,61 @@
         nav ul li a {
             display: block;
             text-align: center;
-            padding: 12px 0;
+            padding: 10px 0;
             text-decoration: none;
             color: #000;
             font-size: 1.1rem;
-            transition: background 0.3s;
         }
 
         nav ul li a:hover {
             background-color: #b8c4f0;
         }
 
-        /* Conteúdo Principal */
+        /* Conteúdo */
         main {
-            padding: 40px 10%;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .content-section {
-            max-width: 900px;
-            margin: 0 auto;
+            padding: 40px;
+            text-align: justify;
+            line-height: 1.5;
         }
 
         h2 {
-            color: #222;
-            margin-bottom: 20px;
+            text-align: center;
+            margin-bottom: 30px;
         }
     </style>
 </head>
 <body>
 
-<header class="header-container">
-    <div class="header-top">
-        <div class="logo-container">
-            <img src="img/logos/on.png" alt="Observatório Nacional" class="logo">
-            <img src="img/logos/valongo.png" alt="Observatório do Valongo - UFRJ" class="logo">
+<div class="page-wrapper">
+    <header>
+        <div class="header-top">
+            <div class="logo-container">
+                <img src="img/logos/on.png" alt="Observatório Nacional" class="logo">
+                <img src="img/logos/valongo.png" alt="Observatório do Valongo - UFRJ" class="logo">
+            </div>
+            <div class="group-title">
+                <h1>Grupo do Rio</h1>
+            </div>
         </div>
-        <div class="group-title">
-            <h1>Grupo do Rio</h1>
-        </div>
-    </div>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="membros/membros.html">Membros</a></li>
-            <li><a href="publicacoes/publicacoes.html">Publicações</a></li>
-            <li><a href="projetos/projetos.html">Projetos</a></li>
-            <li><a href="contato/contato.html">Contato</a></li>
-        </ul>
-    </nav>
-</header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="membros/membros.html">Membros</a></li>
+                <li><a href="publicacoes/publicacoes.html">Publicações</a></li>
+                <li><a href="projetos/projetos.html">Projetos</a></li>
+                <li><a href="contato/contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main>
-    <section class="content-section">
-        <h2>Sobre o Grupo</h2>
+    <main>
+        <h2>Sobre o Projeto</h2>
         <p>
-            Bem-vindo à página.
+            Esta página apresenta o Grupo do Rio.
         </p>
-        <p>
-            Aqui você encontrará informações.
-        </p>
-    </section>
-</main>
+        </main>
+</div>
 
 </body>
 </html>
