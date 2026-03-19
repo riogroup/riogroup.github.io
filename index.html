@@ -1,16 +1,138 @@
-<header>
-  <div class="logo-container">
-    <img src="img/logos/on.png" alt="Observatório Nacional" class="logo">
-    <img src="img/logos/valongo.png" alt="Observatório do Valongo - UFRJ" class="logo">
-  </div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo do Rio | Home</title>
+    <style>
+        /* Reset básico */
+        body, h1, p, ul {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#membros">Membros</a></li>
-      <li><a href="#publicacoes">Publicações</a></li>
-      <li><a href="#projetos">Projetos</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-  </nav>
+        /* Container do Cabeçalho */
+        .header-container {
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+        }
+
+        /* Parte Superior: Logos e Título */
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background-color: #fff;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            height: 70px; 
+            width: auto;
+        }
+
+        .group-title h1 {
+            font-size: 2.2rem;
+            color: #000;
+            font-weight: 400;
+        }
+
+        /* Barra de Navegação */
+        nav {
+            background-color: #ccd5ff; /* Azul claro */
+            border-top: 1px solid #aeb9e8;
+            border-bottom: 1px solid #aeb9e8;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            width: 100%;
+        }
+
+        nav ul li {
+            flex: 1;
+            border-right: 1px solid #fff;
+        }
+
+        nav ul li:last-child {
+            border-right: none;
+        }
+
+        nav ul li a {
+            display: block;
+            text-align: center;
+            padding: 12px 0;
+            text-decoration: none;
+            color: #000;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #b8c4f0;
+        }
+
+        /* Conteúdo Principal */
+        main {
+            padding: 40px 10%;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .content-section {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #222;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header-container">
+    <div class="header-top">
+        <div class="logo-container">
+            <img src="img/logos/on.png" alt="Observatório Nacional" class="logo">
+            <img src="img/logos/valongo.png" alt="Observatório do Valongo - UFRJ" class="logo">
+        </div>
+        <div class="group-title">
+            <h1>Grupo do Rio</h1>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="membros/membros.html">Membros</a></li>
+            <li><a href="publicacoes/publicacoes.html">Publicações</a></li>
+            <li><a href="projetos/projetos.html">Projetos</a></li>
+            <li><a href="contato/contato.html">Contato</a></li>
+        </ul>
+    </nav>
 </header>
+
+<main>
+    <section class="content-section">
+        <h2>Sobre o Grupo</h2>
+        <p>
+            Bem-vindo à página.
+        </p>
+        <p>
+            Aqui você encontrará informações.
+        </p>
+    </section>
+</main>
+
+</body>
+</html>
