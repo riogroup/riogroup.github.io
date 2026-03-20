@@ -3,107 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo do Rio | Home</title>
+    <title>Home | Grupo de Pesquisa</title>
     <style>
-        /* Fundo da página */
         body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #e9ecef; /* Cor azul acinzentada ao fundo */
-            display: flex;
-            justify-content: center;
+            margin: 0; padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex; justify-content: center;
         }
 
-        /* Conteiner Principal */
         .page-wrapper {
-            width: 100%;
-            max-width: 1100px; 
-            background-color: #ffffff; 
+            width: 100%; max-width: 1100px;
+            background-color: #ffffff;
             min-height: 100vh;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1); 
-            border-left: 1px solid #ccc;
-            border-right: 1px solid #ccc;
+            border-left: 1px solid #ccc; border-right: 1px solid #ccc;
         }
 
-        /* Cabeçalho superior */
-        .header-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px; 
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .logo {
-            height: 80px;
-            width: auto;
-        }
-
-        .group-title h1 {
-            font-size: 2.5rem;
-            margin: 0;
-            color: #000;
-            font-weight: normal; 
-        }
-
-        /* Barra de Navegação */
-        nav {
-            background-color: #1a2a44; /* Azul Marinho Profundo */
-            border-top: 1px solid #0d1522;
-            border-bottom: 4px solid #f39c12; /* Detalhe em dourado/albedo */
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            flex: 1;
-            border-right: 1px solid rgba(255, 255, 255, 0.2); /* Borda entre abas */
-        }
-
-        nav ul li:last-child {
-            border-right: none;
-        }
-
-        nav ul li a {
-            display: block;
-            text-align: center;
-            padding: 14px 0;
-            text-decoration: none;
-            color: #ffffff;
+        .header-top { display: flex; justify-content: space-between; align-items: center; padding: 20px; }
+        .logo { height: 70px; }
+        
+        /* Menu com a cor Deep Space e detalhe laranja */
+        nav { background-color: #1a2a44; border-bottom: 4px solid #f39c12; } 
+        nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
+        nav ul li { flex: 1; border-right: 1px solid #fff; }
+        nav ul li:last-child { border-right: none; }
+        nav ul li a { 
+            display: block; 
+            text-align: center; 
+            padding: 12px 0; 
+            text-decoration: none; 
+            color: #fff; 
             font-size: 1.1rem;
-            transition: background 0.3s;
         }
+        nav ul li a:hover { background-color: #2c3e50; }
 
-        nav ul li a:hover {
-            background-color: #2c3e50;
-        }
-
-        /* Conteúdo */
-        main {
-            padding: 50px 80px; /* laterais do texto */
-            text-align: justify;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        h2 {
-            text-align: left; 
-            color: #1a2a44;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-        }
+        main { padding: 40px; line-height: 1.6; color: #333; }
+        
+        .welcome-section { margin-bottom: 30px; }
+        h2 { color: #1a2a44; border-bottom: 1px solid #eee; padding-bottom: 10px; }
     </style>
 </head>
 <body>
@@ -112,14 +49,13 @@
     <header>
         <div class="header-top">
             <div class="logo-container">
-                <img src="img/logos/on.png" alt="Observatório Nacional" class="logo">
-                <img src="img/logos/valongo.png" alt="Observatório do Valongo - UFRJ" class="logo">
+                <img src="img/logos/on.png" alt="ON" class="logo">
+                <img src="img/logos/valongo.png" alt="Valongo" class="logo">
             </div>
             <div class="group-title">
                 <h1>Grupo do Rio</h1>
             </div>
         </div>
-
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -132,13 +68,15 @@
     </header>
 
     <main>
-        <h2>Sobre o Grupo de Pesquisa</h2>
-        <p>
-            O <strong>Grupo do Rio</strong> é uma colaboração. 
-        </p>
-        <p>
-             <strong>ocultações estelares</strong>.
-        </p>
+        <section class="welcome-section">
+            <h2>Sobre o Grupo</h2>
+            <p>
+                teste <strong>teste</strong>.
+            </p>
+            <p>
+                teste.
+            </p>
+        </section>
     </main>
 </div>
 
