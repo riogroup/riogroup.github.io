@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publicações | Grupo do Rio</title>
+    <title>Equipe | Grupo de Pesquisa</title>
     <style>
         body {
             margin: 0; padding: 0;
@@ -19,43 +19,24 @@
             border-left: 1px solid #ccc; border-right: 1px solid #ccc;
         }
 
-        /* Cabeçalho superior */
         .header-top { display: flex; justify-content: space-between; align-items: center; padding: 20px; }
-        
-        .logo-container { display: flex; align-items: center; gap: 20px; }
         .logo { height: 70px; }
-
-        .group-title h1 {
-            font-size: 2.5rem;
-            margin: 0;
-            color: #000;
-            font-weight: normal;
-        }
-
-        /* Barra de Navegação */
-        nav { 
-            background-color: #1a2a44; 
-            border-bottom: 4px solid #f39c12; 
-        } 
-        
+        nav { background-color: #1a2a44; border-bottom: 4px solid #f39c12; } /* Exemplo com a cor Deep Space */
         nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
-        
-        nav ul li { flex: 1; border-right: 1px solid rgba(255, 255, 255, 0.2); }
-        nav ul li:last-child { border-right: none; }
-        
-        nav ul li a { 
-            display: block; 
-            text-align: center; 
-            padding: 12px 0; 
-            text-decoration: none; 
-            color: #fff; 
-            font-size: 1.1rem;
+        nav ul li { flex: 1; border-right: 1px solid #fff; }
+        nav ul li a { display: block; text-align: center; padding: 12px 0; text-decoration: none; color: #fff; }
+
+        /* Estilos específicos da página Team */
+        main { padding: 40px; }
+        .institution-section { margin-bottom: 50px; }
+        .institution-title {
+            color: #3182ce;
+            font-size: 1.5rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
         }
         
-        nav ul li a:hover { background-color: #2c3e50; }
-
-        main { padding: 40px; }
-        h2 { color: #1a2a44; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 30px; }
     </style>
 </head>
 <body>
@@ -68,14 +49,14 @@
                 <img src="../img/logos/valongo.png" alt="Valongo" class="logo">
             </div>
             <div class="group-title">
-                <h1>Grupo do Rio</h1>
+                <h1>Nome do Grupo</h1>
             </div>
         </div>
         <nav>
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="../team/team.html">Membros</a></li>
-                <li><a href="publicacoes.html">Publicações</a></li>
+                <li><a href="team.html">Membros</a></li>
+                <li><a href="../publicacoes/publicacoes.html">Publicações</a></li>
                 <li><a href="../projetos/projetos.html">Projetos</a></li>
                 <li><a href="../contato/contato.html">Contato</a></li>
             </ul>
@@ -83,8 +64,8 @@
     </header>
 
     <main>
-        <h2>Publicações</h2>
-        </main>
+        <h2 style="text-align: center;">2026</h2>
+    </main>
 </div>
 
 </body>
