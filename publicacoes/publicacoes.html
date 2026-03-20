@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Publicações | Grupo de Pesquisa</title>
+    <script src="https://bibtex-js.github.io/bibtex-js/bibtex_js.js"></script>
+    <style>
+        body { margin: 0; background-color: #f0f0f0; display: flex; justify-content: center; font-family: Arial; }
+        .page-wrapper { width: 100%; max-width: 1100px; background: #fff; min-height: 100vh; border: 1px solid #ccc; }
+        
+        .header-top { display: flex; justify-content: space-between; align-items: center; padding: 20px; }
+        nav { background-color: #1a2a44; border-bottom: 4px solid #f39c12; }
+        nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
+        nav ul li { flex: 1; border-right: 1px solid #fff; }
+        nav ul li a { display: block; text-align: center; padding: 12px 0; text-decoration: none; color: #fff; }
+
+        main { padding: 40px; }
+        
+        #bibtex_errors { color: red; font-weight: bold; }
+        .bibtex_template { display: none; } 
+        
+        .bibtex_display {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 5px solid #1a2a44;
+            background: #f9f9f9;
+        }
+        .bib_title { font-weight: bold; color: #3182ce; display: block; font-size: 1.1rem; }
+        .bib_author { font-style: italic; color: #555; }
+        .bib_journal { font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+    <header>
+        <div class="header-top">
+            <img src="../img/logos/on.png" alt="ON" style="height:70px;">
+            <h1>Grupo de Pesquisa</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../team/team.html">Membros</a></li>
+                <li><a href="publicacoes.html">Publicações</a></li>
+                <li><a href="../projetos/projetos.html">Projetos</a></li>
+                <li><a href="../contato/contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Publicações</h2>
+        
+        <div id="bibtex_errors"></div>
+        <div id="bibtex_display">
+            <div class="bibtex_template">
+                <div class="bibtex_display">
+                    <span class="bib_title">Title: </span>
+                    <span class="title"></span><br>
+                    <span class="bib_author">Authors: </span>
+                    <span class="author"></span><br>
+                    <span class="bib_journal">Journal: </span>
+                    <span class="journal"></span>, <span class="year"></span>
+                    <a class="url_if_exists" href=""><span class="url"> [Link]</span></a>
+                </div>
+            </div>
+        </div>
+
+        <bibtex src="bib.tex"></bibtex>
+    </main>
+</div>
+
+</body>
+</html>
