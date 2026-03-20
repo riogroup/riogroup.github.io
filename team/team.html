@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipe | Grupo de Pesquisa</title>
+    <style>
+        body {
+            margin: 0; padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex; justify-content: center;
+        }
+
+        .page-wrapper {
+            width: 100%; max-width: 1100px;
+            background-color: #ffffff;
+            min-height: 100vh;
+            border-left: 1px solid #ccc; border-right: 1px solid #ccc;
+        }
+
+        .header-top { display: flex; justify-content: space-between; align-items: center; padding: 20px; }
+        .logo { height: 70px; }
+        nav { background-color: #1a2a44; border-bottom: 4px solid #f39c12; } /* Exemplo com a cor Deep Space */
+        nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
+        nav ul li { flex: 1; border-right: 1px solid #fff; }
+        nav ul li a { display: block; text-align: center; padding: 12px 0; text-decoration: none; color: #fff; }
+
+        /* Estilos específicos da página Team */
+        main { padding: 40px; }
+        .institution-section { margin-bottom: 50px; }
+        .institution-title {
+            color: #3182ce;
+            font-size: 1.5rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        /* Grid de Membros */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .member-card img {
+            width: 150px;
+            height: 180px;
+            object-fit: cover; 
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+
+        .member-info h3 { margin: 5px 0; font-size: 1.1rem; }
+        .member-info p { margin: 2px 0; font-size: 0.9rem; color: #555; }
+        .role { font-weight: bold; color: #333; }
+    </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+    <header>
+        <div class="header-top">
+            <div class="logo-container">
+                <img src="../img/logos/on.png" alt="ON" class="logo">
+                <img src="../img/logos/valongo.png" alt="Valongo" class="logo">
+            </div>
+            <div class="group-title">
+                <h1>Nome do Grupo</h1>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="team.html">Membros</a></li>
+                <li><a href="../publicacoes/publicacoes.html">Publicações</a></li>
+                <li><a href="../projetos/projetos.html">Projetos</a></li>
+                <li><a href="../contato/contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 style="text-align: center;">Equipe do Projeto</h2>
+
+        <section class="institution-section">
+            <h2 class="institution-title">Observatório Nacional (ON)</h2>
+            <div class="team-grid">
+                
+                <div class="member-card">
+                    <img src="../img/team/image.png" alt="Giuliano Margoti">
+                    <div class="member-info">
+                        <h3>Giuliano Margoti</h3>
+                        <p class="role">PhD Candidate</p>
+                        <p>National Observatory</p>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <img src="../img/team/image.png" alt="Felipe Braga Ribas">
+                    <div class="member-info">
+                        <h3>Julio Camargo</h3>
+                        <p class="role">Professor / Supervisor</p>
+                        <p>UTFPR</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="institution-section">
+            <h2 class="institution-title">Observatório do Valongo (UFRJ)</h2>
+            <div class="team-grid">
+                
+                <div class="member-card">
+                    <img src="../img/team/image.png" alt="Nome do Membro">
+                    <div class="member-info">
+                        <h3>Nome do Pesquisador</h3>
+                        <p class="role">Researcher</p>
+                        <p>UFRJ - Valongo</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+</div>
+
+</body>
+</html>
