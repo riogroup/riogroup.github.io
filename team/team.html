@@ -104,7 +104,7 @@
 
 <script>
     // Usamos o caminho absoluto "/" para garantir que ele ache o arquivo na raiz
-    fetch('/header.html')
+    fetch('../header.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
