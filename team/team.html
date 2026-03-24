@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equipe | Grupo de Pesquisa</title>
     <style>
-        /* Estilos da Estrutura (Padrão do Site) */
         body {
             margin: 0; padding: 0;
             font-family: Arial, sans-serif;
@@ -18,27 +17,106 @@
             background-color: #ffffff;
             min-height: 100vh;
             border-left: 1px solid #ccc; border-right: 1px solid #ccc;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
-        /* Estilos Específicos da Página de Membros */
-        main { padding: 40px; font-family: "Times New Roman", Times, serif; }
+        .header-top { display: flex; justify-content: space-between; align-items: center; padding: 20px; }
+        .logo { height: 70px; }
+        nav { background-color: #1a2a44; border-bottom: 4px solid #f39c12; } 
+        nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
+        nav ul li { flex: 1; border-right: 1px solid #fff; }
+        nav ul li a { display: block; text-align: center; padding: 12px 0; text-decoration: none; color: #fff; }
 
-        .institution-section { margin-bottom: 50px; }
 
-        .institution-title {
-            color: #1a2a44;
-            font-size: 2rem; 
-            border-bottom: 2px solid #f39c12; 
-            padding-bottom: 10px;
-            margin-bottom: 30px;
+        nav ul li {
+            position: relative; 
+        }
+
+
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%; 
+            left: 0;
+            background-color: #1a2a44;
+            min-width: 200px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            z-index: 1000;
+            border-bottom: 3px solid #f39c12;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+        }
+
+
+        nav ul li:hover .submenu {
+            display: block;
+        }
+
+
+        .submenu li {
+            border-right: none; 
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .submenu li a {
             text-align: left;
+            padding: 15px 20px;
+            font-size: 1rem;
         }
 
-        /* Grid de Membros */
+        .submenu li a:hover {
+            background-color: #2c3e50;
+            color: #f39c12;
+        }
+
+        main { 
+                    padding: 40px; 
+                    font-family: "Times New Roman", Times, serif; 
+                }
+        
+                .institution-section { 
+                    margin-bottom: 50px; 
+                }
+        
+                .institution-title {
+                    color: #1a2a44;
+                    font-size: 2rem; 
+                    border-bottom: 2px solid #f39c12; 
+                    padding-bottom: 10px;
+                    margin-bottom: 30px;
+                    text-align: left;
+                }
+                 
+                .group-title {
+                    margin-left: calc(100% / 6); 
+                    flex-grow: 1;
+                }
+        
+                .gif-container {
+                    height: 200px; 
+                    overflow: hidden; 
+                    display: inline-block; 
+                    vertical-align: middle;
+                }
+                
+                .jeans-gif {
+                    display: block;
+                    height: 250px; 
+                    width: auto;
+                    clip-path: inset(25px 0 25px 0); 
+                    margin-top: -25px; 
+                }
+        
+                main p {
+                    font-size: 1.25rem; 
+                    /*text-align: justify;*/ 
+                    /*line-height: 1.8;*/    
+                    color: #333;
+                }
+
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 30px;
             text-align: center;
         }
@@ -51,66 +129,232 @@
             margin-bottom: 10px;
         }
 
-        .member-info h3 { margin: 5px 0; font-size: 1.2rem; }
-        .member-info p { margin: 2px 0; font-size: 1rem; color: #555; }
+        .member-info h3 { margin: 5px 0; font-size: 1.1rem; }
+        .member-info p { margin: 2px 0; font-size: 0.9rem; color: #555; }
         .role { font-weight: bold; color: #333; }
-
-        .lattes-link { text-decoration: none; color: #1a2a44; }
-        .lattes-link:hover { text-decoration: underline; color: #3182ce; }
     </style>
 </head>
 <body>
 
 <div class="page-wrapper">
-    <div id="header-placeholder"></div>
+    <header>
+        <div class="header-top">
+            <div class="logo-container">
+                    <div class="gif-container">
+                        <img src="../img/logos/jeans.gif" alt="logo animado" class="jeans-gif">
+                    </div>
+            </div>
+            <div class="group-title">
+                <h1>Grupo de pesquisas em ocultações estelares e caracterização física de objetos do Sistema Solar</h1>
+            </div>
+        </div>
+
+       <nav>
+          <ul>
+              <li><a href="../index.html">Home</a></li>
+              
+              <li class="has-submenu">
+                  <a href="team.html">Membros ▾</a>
+                  <ul class="submenu">
+                      <li><a href="team.html#membros-internos">Membros Internos</a></li>
+                      <li><a href="team.html#colaboradores">Colaboradores</a></li>
+                  </ul>
+              </li>
+
+              <li class="has-submenu">
+                  <a href="../publicacoes/publicacoes.html">Publicações ▾</a>
+                  <ul class="submenu">
+                      <li><a href="../publicacoes/publicacoes.html#Artigos">Artigos</a></li>
+                      <li><a href="../publicacoes/publicacoes.html#Teses">Teses</a></li>
+                      <li><a href="../publicacoes/publicacoes.html#Dissertações">Dissertações</a></li>
+                      <li><a href="../publicacoes/publicacoes.html#Artido-dos-colaboradores">Artigos dos colaboradotes</a></li>
+                  </ul>
+              </li>
+              
+              <li class="has-submenu">
+                  <a href="projetos.html">Projetos ▾</a>
+                  <ul class="submenu">
+                      <li><a href="../projetos/projetos.html#Campanhas">Campanhas de observações do grupo</a></li>
+                      <li><a href="../projetos/projetos.html#Observacoes">Observações do grupo</a></li>
+                  </ul>
+              </li>
+              
+              <li class="has-submenu">
+                  <a href="../projetos/projetos.html">Colaborações ▾</a>
+                  <ul class="submenu">
+                      <li><a href="https://giuliano-margoti.github.io/Observa-es-grupo-do-Rio/index.html">Telescópios</a></li>
+                      <li><a href="https://solarsystem.linea.org.br/">Solar System Portal</a></li>
+                      <li><a href="https://lesia.obspm.fr/lucky-star/index.php">Lucky Star</a></li>
+                      <li><a href="https://opop.obspm.fr/">Occultation Portal</a></li>
+                  </ul>
+              </li>
+              
+          </ul>
+      </nav>
+
+    </header>
 
     <main>
-        <h2 style="text-align: center; font-size: 2.5rem; color: #1a2a44; margin-bottom: 40px;">Equipe do Projeto</h2>
-
+        <h2 style="text-align: center;">Equipe do Projeto</h2>
+        
+        <div id="membros-internos">
+        
         <section class="institution-section">
             <h2 class="institution-title">Observatório Nacional (ON)</h2>
             <div class="team-grid">
                 
                 <div class="member-card">
-                    <img src="https://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=2331088061589222" alt="Julio Camargo">
+                    <img src="https://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4796229P9" alt="Julio Ignacio Bueno de Camargo">
                     <div class="member-info">
                         <h3>
-                            <a href="https://lattes.cnpq.br/2331088061589222" target="_blank" rel="noopener" class="lattes-link">
+                            <a href="https://lattes.cnpq.br/2331088061589222" target="_blank" class="lattes-link">
                                 Dr. Julio Ignacio Bueno de Camargo
                             </a>
                         </h3>
                         <p class="role">Professor</p>
-                        <p><a href="mailto:camargo@on.br" style="text-decoration:none; color:#555;">camargo@on.br</a></p>
+                        <p>camargo@on.br</p>
+                    </div>
+                </div>
+                
+                <div class="member-card">
+                    <img src="https://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4600846J7" alt="Gustavo Oliveira Madeira">
+                    <div class="member-info">
+                        <h3>
+                            <a href="https://lattes.cnpq.br/2751228869487751" target="_blank" class="lattes-link">
+                                Dr. Gustavo Oliveira Madeira
+                            </a>
+                        </h3>
+                        <p class="role">Professor</p>
+                        <p>madeira@on.br</p>
+                    </div>
+                </div>
+                
+                <div class="member-card">
+                    <img src="../img/team/image.png" alt="Tiago Francisco Lins Leal Pinheiro">
+                    <div class="member-info">
+                        <h3>Dr. Tiago Francisco Lins Leal Pinheiro</h3>
+                        <p class="role">Posdoc</p>
+                        <p>franciscopinheiro@on.br</p>
+                    </div>
+                </div>
+                
+                <div class="member-card">
+                    <img src="../img/team/image.png" alt="Giuliano Margoti">
+                    <div class="member-info">
+                        <h3>Ms. Giuliano Margoti</h3>
+                        <p class="role">Doutorando</p>
+                        <p>giulianomargoti@on.br</p>
+                    </div>
+                </div>
+                
+                <div class="member-card">
+                    <img src="../img/team/image.png" alt="Eros de Oliveira Gradovski">
+                    <div class="member-info">
+                        <h3>Ms. Eros de Oliveira Gradovski</h3>
+                        <p class="role">Doutorando</p>
+                        <p>erosgradovski@gmail.com</p>
                     </div>
                 </div>
 
                 <div class="member-card">
-                    <img src="../img/team/giuliano.jpg" alt="Giuliano Margoti">
+                    <img src="../img/team/image.png" alt="Jonatã Arcas Silva">
                     <div class="member-info">
-                        <h3>
-                            <a href="URL_SEU_LATTES" target="_blank" rel="noopener" class="lattes-link">
-                                Ms. Giuliano Margoti
-                            </a>
-                        </h3>
+                        <h3>Ms. Jonatã Arcas Silva</h3>
                         <p class="role">Doutorando</p>
-                        <p>margoti@on.br</p>
+                        <p>jonatasilva@on.br</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="institution-section">
+            <h2 class="institution-title">Observatório do Valongo (UFRJ)</h2>
+            <div class="team-grid">
+                
+                <div class="member-card">
+                    <img src="../img/team/image.png" alt="Nome do Membro">
+                    <div class="member-info">
+                        <h3>Nome do Pesquisador</h3>
+                        <p class="role">Researcher</p>
+                        <p>UFRJ - Valongo</p>
                     </div>
                 </div>
 
-                </div>
+            </div>
         </section>
+
+        <section class="institution-section">
+            <h2 class="institution-title">Universidade Tecnológica Federal do Paraná (UTFPR)</h2>
+            <div class="team-grid">
+                
+                <div class="member-card">
+                    <img src="../img/team/image.png" alt="Nome do Membro">
+                    <div class="member-info">
+                        <h3>Nome do Pesquisador</h3>
+                        <p class="role">Researcher</p>
+                        <p>UTFPR</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="institution-section">
+            <h2 class="institution-title">Universidade Federal de Uberlandia (UFU)</h2>
+            <div class="team-grid">
+                
+                <div class="member-card">
+                    <img src="../img/team/image.png" alt="Nome do Membro">
+                    <div class="member-info">
+                        <h3>Nome do Pesquisador</h3>
+                        <p class="role">Researcher</p>
+                        <p>UFU</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="institution-section">
+            <h2 class="institution-title">Faculdade de Engenharia de Guaratinguetá (FEG-UNESP)</h2>
+            <div class="team-grid">
+                
+                <div class="member-card">
+                    <img src="../img/team/image.png" alt="Nome do Membro">
+                    <div class="member-info">
+                        <h3>Nome do Pesquisador</h3>
+                        <p class="role">Researcher</p>
+                        <p>FEG-UNESP</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+      
+      </div>
+
+      <div id="colaboradores">
+        <section class="institution-section">
+            <h2 class="institution-title">Colaboradores</h2>
+            <div class="team-grid">
+                
+                <div class="member-card">
+                    <img src="../img/team/image.png" alt="Nome do Membro">
+                    <div class="member-info">
+                        <h3>Nome do Pesquisador</h3>
+                        <p class="role">Researcher</p>
+                        <p>IAA</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+      </div>
+        
     </main>
 </div>
-
-<script>
-    // Usamos o caminho absoluto "/" para garantir que ele ache o arquivo na raiz
-    fetch('../header.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('header-placeholder').innerHTML = data;
-        })
-        .catch(error => console.error('Erro ao carregar o cabeçalho:', error));
-</script>
 
 </body>
 </html>
